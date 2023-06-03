@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="/assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Account settings</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="/assets/css/demo.css" />
+    <!-- <link rel="stylesheet" href="account-settings.component.scss" /> -->
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Helpers -->
+    <script src="/assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="/assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="index.html" class="app-brand-link">
+              <img src="..\assets\img\logo-bpo.png">
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item">
+              <a (click)="redirectToDashboard()" class="menu-link" style="cursor: pointer;">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Accueil</div>
+              </a>
+            </li>
+
+            <!-- Profil -->
+            <li class="menu-item">
+              <a class="menu-link">
+                <i class="gg-profile"></i>
+                <div (click)="redirectToAccountSettings()" style="cursor: pointer;" >Profil</div>
+              </a>
+            </li>
+
+            <!-- ajout des ordonnances -->
+            <li class="menu-item active">
+              <a class="menu-link">
+                <i class="gg-check-r"></i>
+                <div (click)="redirectToAjoutOrdonnance()" style="cursor: pointer;" >Ajout Ordonnances</div>
+              </a>
+            </li>
+            <!-- historique des ordonnances -->
+            
+            <li class="menu-item">
+              <a class="menu-link">
+                <i class="gg-menu"></i>
+                <div (click)="redirectToHistorique()" style="cursor: pointer;" >Historique</div>
+              </a>
+            </li>
+
+            
+            <!-- Vérifier médicament  -->
+            <li class="menu-item">
+              <a class="menu-link">
+                <i class="gg-info"></i>
+                <div (click)="RedirectToVerifMed()" style="cursor: pointer;">Vérifier médicament</div>
+              </a>
+            </li>
+            
+            <!-- Suggestion / Réclamations  -->
+            <li class="menu-item">
+              <a class="menu-link">
+                <i class="gg-tag"></i>
+                <div (click)="redirectToSugRec()" style="cursor: pointer;">Suggestions/ Réclamations</div>
+              </a>
+            </li>
+
+            <!-- Deconnecter -->
+            <li class="menu-item" style="bottom: 0; position: absolute;">
+              <a class="menu-link" >
+                <i class='bx bx-log-out-circle' ></i>
+                <div style="cursor: pointer;" >&nbsp; Se Déconnecter</div>
+              </a>
+            </li>
+
+          </ul>
+        </aside>
+          <!-- / Menu -->
+        <!-- Layout container -->
+        <div class="layout-page">
+           
+  <!-- navbar -->
+  <nav class="layout-content-navbar navbar-expand-lg navbar-light custom-bg">
+    <div>
+      <a class="" href="#" style="float: right;"><i class='bx bxs-phone' ></i>Contact</a>
+    </div>
+    <div>
+      <a (click)="RedirectToGuide()" href="" style="float: right;"><i class='bx bx-info-circle' ></i> Guide &nbsp;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+  </nav>
+<!-- / Navbar -->
+            <!-- Content wrapper -->
+            <div class="content-wrapper">
+            <!-- content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+       
+        <div class="row">
+        <div class="col-md-12">
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Ajout des Ordonnances /</span> Données adhérent</h4>
+
+            <div class="card mb-4">
+            <!-- <h5 class="card-header">Ajouter des ordonnances</h5> -->
+            <!-- Account -->
+            
+            <!-- <hr class="my-0" /> -->
+            <div class="card-body">
+
+                <div class="mb-4">
+                    <label for="exampleFormControlSelect1" class="form-label">Contractant: </label>
+                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example" [(ngModel)]="selectedOption">
+                      <option *ngFor="let contractant of contractant" [value]="contractant.nom">{{contractant.nom}}</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <input class="form-control" placeholder="Matricule adhérent" [(ngModel)]="id"/>
+                </div>
+                <button id="showToastPlacement" class="btn btn-primary d-block" (click)="serchAdherent()">Rechercher</button>
+                
+                
+            <!-- /Account -->
+            </div>
+            
+            
+        </div>
+            
+        </div>
+        <div class="container-xxl flex-grow-1 container-p-y" >
+          
+          <div *ngIf="!searchError" class="alert alert-success" role="alert">Adhésion Valide.</div>
+          <div class="row">
+            <!-- User Sidebar -->
+            <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+              <!-- User Card -->
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="pb-2 border-bottom mb-4">&nbsp; Données Adhérent</h5>
+                  
+                    <table class="table table-striped" *ngIf="adherent && !searchError">
+                      <tr>
+                        <th class="fw-bold me-2">Adhérent:</th>
+                        <td style="text-align: center;">{{ adherent.name }}</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-bold me-2">Sexe:</th>
+                        <td style="text-align: center;">{{ adherent.sexe }}</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-bold me-2">Date de naissance:</th>
+                        <td style="text-align: center;">{{ adherent.dateNaissance }}</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-bold me-2">Gouvernorat de naissance:</th>
+                        <td style="text-align: center;">{{ adherent.gouvernorat }}</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-bold me-2">Pays de naissance:</th>
+                        <td style="text-align: center;">{{ adherent.pays }}</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-bold me-2">CIN:</th>
+                        <td style="text-align: center;">{{ adherent.cin }}</td>
+                      </tr>
+                      <tr>
+                        <th class="fw-bold me-2">Plafond:</th>
+                        <td><span class="badge rounded-pill bg-label-success">{{ adherent.plafond }}</span></td>
+                      </tr>
+                    </table>
+                    <div class="alert alert-danger" role="alert" *ngIf="searchError">Aucun adhérent correspondant au matricule n'a été trouvé dans la base de données.</div>
+                  </div>
+                </div>
+              
+              <!-- /User Card -->
+              <!-- Plan Card -->
+              
+              <!-- /Plan Card -->
+            </div>
+            <!--/ User Sidebar -->
+          
+            <!-- User Content -->
+            <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+              <!-- User Pills -->
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="pb-2 border-bottom mb-4"><i class="fa-solid fa-list"></i>&nbsp; Historique</h5>
+                  <div class="info-container">
+                    <table class="table table-striped text-nowrap table-responsive">
+                      <thead>
+                        <tr>
+                          <th>N°Consultation</th>
+                          <th>Date</th>
+                          <th>Nom du Bénéficiaire</th>
+                          <th>Qualité du Bénéficiaire</th>
+                          <th>Médecin</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of history">
+                          <td style="text-align: center">{{ item.nConsultation }}</td>
+                          <td style="text-align: center">{{ item.date }}</td>
+                          <td style="text-align: center">{{ item.nomBenefic }}</td>
+                          <td style="text-align: center">{{ item.qualiteBenefic }}</td>
+                          <td style="text-align: center">{{ item.medecin }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="alert alert-danger" role="alert" *ngIf="searchError">Aucun adhérent correspondant au matricule n'a été trouvé dans la base de données.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Modal -->
+              <!-- modal button -->
+              <button type="button" class="btn btn-danger btn-lg " data-bs-toggle="modal" data-bs-target="#exLargeModal" style="float: right;">
+                Ajouter Ordonnance
+              </button>
+              <!-- /modal button -->
+              <!-- modal content -->
+              <div class="modal fade" id="exLargeModal" tabindex="-1" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalCenterTitle" >Ajouter une Ordonnance</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="card mb-4" style="padding: 25px; margin: 15px 15px 0px 15px;">
+                      <!-- données existantes -->
+                      <!-- <table>
+                        <th>Date</th>
+                        <th>Professionnel de Santé</th>
+                        <th>Montant Dépensé</th>
+                        <th>Montant Revisé</th>
+          
+                        <tr>
+                          <td>(existing data)</td>
+                          <td>(existing data)</td>
+                          <td>(existing data)</td>
+                          <td>(existing data)</td>
+                          <td><button type="button" class="btn btn-dark btn-icon">
+                            <span class="fa-solid fa-plus"><div style="font-size: x-large;"><strong>x</strong></div></span>
+                          </button></td>
+                        </tr>
+                        
+                      </table> -->
+                      <!-- <hr> -->
+                      <!-- ajouter -->
+                      <form id="creditCardForm" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework fv-plugins-icon-container" onsubmit="return false" novalidate="novalidate">
+                        <div class="col-8 col-md-2">
+                          <label class="form-label" for="paymentName"> Médicament Désignation</label>
+                            <div class="input-group input-group-merge">
+                             <input type="text" id="paymentName" class="form-control" required="required">
+                             <span class="input-group-text cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </div></div>
+                        <div class="col-6 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate"><br>Code PCT</label><br>
+                          <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                        </div>
+                        <div class="col-2 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate">Prix Public</label>
+                          <div class="input-group input-group-merge">
+                          <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                          <span class="input-group-text cursor-pointer" id="paymentCvv2">TND</span>
+                        </div></div>
+                        <div class="col-2 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate"><br> Durée (j)</label>
+                          <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                        </div>
+                        <div class="col-6 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate"><br> Quantité</label>
+                          <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                        </div>
+                        <div class="col-6 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate"><br> PU</label>
+                            <div class="input-group input-group-merge">
+                              <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                              <span class="input-group-text cursor-pointer" id="paymentCvv2">TND</span>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate">Montant Dépensé</label>
+                          <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                        </div>
+                        <div class="col-6 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate">Décompte RO</label>
+                          <div class="input-group input-group-merge">
+                          <input type="text" id="paymentExpiryDate" class="form-control expiry-date-mask">
+                          <span class="input-group-text cursor-pointer" id="paymentCvv2">TND</span>
+                        </div></div>
+                        <div class="col-6 col-md-1">
+                          <label class="form-label" for="paymentExpiryDate"><br> Non Rem</label> <br>&nbsp;
+                          &nbsp;&nbsp;&nbsp;<input class="form-check-input" type="radio" id="paymentExpiryDate" style="margin-left: 4px; margin-top: 10px;">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-icon btn-dark" style="margin-top: 45px;">
+                          <span class="fa-solid fa-plus"><div style="font-size: x-large;"><strong>x</strong></div></span>
+                        </button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-danger btn-icon" style="margin-top: 45px; margin-right: 0; float: right;">
+                          <span class="fa-sharp fa-solid fa-xmark"><div style="font-size: xx-large;"><strong>+</strong></div></span>
+                        </button>
+                        
+                      </form>
+                      <br>
+                      
+                  </div>
+                    <div class="modal-footer">
+                      <div class="demo-inline-spacing">
+                        <button type="button" class="btn btn-dark">Valider Ordonnance</button>
+                        <button type="button" class="btn btn-secondary">Enregistrer Brouillon</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /modal content -->
+            </div>
+            <!--/ User Content -->
+            
+          </div>
+        </div>
+        
+
+        
+        <!-- Adhesion valide -->
+        
+        <!-- /Adhesion valide -->
+
+    </div>
+<!-- /Content -->

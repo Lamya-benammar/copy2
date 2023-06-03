@@ -1,0 +1,64 @@
+
+    <div class="demo-inline-spacing">
+        
+          <table style="width: 100%; height: 50%;" [hidden]="!showData">
+            <tr>
+                <td>
+					
+                  <div>Nombre d'elements à afficher :&nbsp;
+                    <select class="btn btn-outline-primary dropdown-toggle">
+                      <option value="0">Afficher</option>
+                      <option value="1">Audi</option>
+                    </select>
+                </div>
+                </td>
+                
+            </tr>
+          </table>
+          <br>
+    </div>
+      
+    <div class="table-responsive text-nowrap">
+		<table class="table table-striped">
+			<thead>
+				<tr >
+					<th>N° Transaction</th>
+					<th>N° Bordereau</th>
+					<th>Contractant</th>
+					<th>Matricule de <br> l'assurance</th>
+					<th>Nom de l'assuré</th>
+					<th>Nom du bénéficiaire</th>
+					<th>Qualité du bénéficiaire</th>
+					<th>Date transaction</th>
+					<th>N° Consultation</th>
+					<th>Montant du <br> ticket modérateur</th>
+					<th>Reste à payer</th>
+					<th>Status</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor = "let item of contractant">
+					<td>{{item.nTransaction}}</td>
+					<td>{{item.nBordereau}}</td>
+					<td>{{item.contractant}}</td>
+					<td>{{item.matriculeAssure}}</td>
+					<td>{{item.nomAssure}}</td>
+					<td>{{item.nomBenefic}}</td>
+					<td>{{item.qualiteBenefic}}</td>
+					<td>{{item.dateTrans}}</td>
+					<td>{{item.nConsultation}}</td>
+					<td>{{item.tickMod}}</td>
+					<td>{{item.restePayer}}</td>
+					<td>{{item.statut}}</td>
+					<td><button class="rounded-button">
+						+
+					  </button></td>
+				
+				<!-- Add more rows as needed -->
+			</tbody>
+		</table>
+	</div>
+	<br>
+	
+	

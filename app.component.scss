@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .menu {
+    display: inline-block;
+    width: 0px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 0px;
+  }
